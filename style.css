@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Josefin+Sans&family=Kumbh+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:wght@400;700&family=Red+Hat+Display:wght@500;700;900&family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container {
+    background-color: #fff;
+    width: 50%;
+    display: flex;
+    border-radius: 20px;
+}
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 100%;
+    padding: 5% 5% 5% 0%;
+    /* padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%; */
+}
+.question-container {
+    border-bottom: 0.1px solid lightgrey;
+    font-size: 12px !important;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 0 2% 0;
+}
+.answer {
+    display: none;
+    margin-bottom: 5%;
+}
+/* .display {
+    display: contents;
+} */
+button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    /* cursor: pointer; */
+}
+button:hover{
+    cursor: pointer;
+    color: hsl(14, 88%, 65%);
+} 
+.image-container {
+    width: 50%;
+    padding-bottom: 2%;
+    position: relative;
+}
+.image-one {
+    width: 110%;
+    height: 100%;
+    background-image: url('./images/illustration-woman-online-desktop.svg');
+    background-repeat: no-repeat;
+    background-position-x: -60px;
+    background-position-y: 70px;
+    background-size: 85%;
+    position: absolute;
+    z-index: 1;
+}
+.image-one img {
+    position: absolute;
+    top: 35%;
+    left: -26%;
+}
+.image-two {
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position-y: -180px;
+    background-position-x: -410px;
+    position: absolute;
+}
+.image-two img, .image-three img {
+    display: none;
+}
+.arrow {
+    transform: rotate(180deg);
+}
+.bold {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1440px) {
+    .image-one {
+        background-size: 100%;
+    }
+    .image-one img {
+        top: 35%;
+        left: -25%;
+    }
+    .image-two {
+        background-size: 200%;
+        background-position-y: -180px;
+        background-position-x: -370px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+    .main-container h1 {
+        text-align: center;
+    }
+    .faq-container {
+        margin-top: 40%;
+        margin-bottom: 15%;
+        width: 87%;
+    }
+    button {
+        width: 100%;
+    }
+    .image-one {
+        background-image: none;
+    }
+    .image-one img {
+        display: none;
+    }
+    .image-two img {
+        display: inline-block;
+        position: absolute;
+        top: -60px;
+        right: -22%;
+    }
+    .image-three {
+        background-size: 40%;
+    }
+    .image-three img {
+        display: inline-block;
+        position: absolute;
+        top: 95%;
+        right: -35%;
+    }
+}
